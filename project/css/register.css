@@ -1,27 +1,262 @@
-body,ul{margin: 0;padding: 0;}
-
-
-body{background: #cecccf;}
-img{vertical-align: middle;}
-a{text-decoration: none;}
-
-
-#wrap{
-	width: 100%;
+body, ul, input, p {
+  margin: 0;
+  padding: 0;
 }
-#wrap a{
-	display: block;
-	width: 1016px;
-	margin: 0 auto;
+
+body {
+  background: #cecccf;
 }
-#main{
-	margin: 0 auto;
-	width: 1016px;
-	height: 563px;
-	background: #fff;
+
+img {
+  vertical-align: middle;
 }
-#main_l{
-	width: 505px;
-	height: 563px;
-	background: red;
+
+a {
+  text-decoration: none;
 }
+
+i {
+  font-style: normal;
+}
+
+#wrap {
+  width: 100%;
+}
+
+#wrap #header {
+  display: block;
+  width: 1016px;
+  margin: 0 auto;
+}
+
+#main {
+  margin: 0 auto;
+  width: 1016px;
+  height: 563px;
+  background: #fff;
+  margin-bottom: 47px;
+}
+
+#main_l {
+  float: left;
+  width: 505px;
+  height: 563px;
+}
+
+#main_l img {
+  margin: 29px 0 0 84px;
+}
+
+#main_r {
+  width: 400px;
+  height: 563px;
+  /*background: yellow;*/
+  position: relative;
+  float: left;
+}
+
+#main_r #dl {
+  margin-top: 16px;
+  display: inline-block;
+  width: 196px;
+  height: 22px;
+  padding-bottom: 15px;
+  text-align: center;
+  background: #fff;
+  color: #000;
+}
+
+#main_r #zc {
+  margin-top: 16px;
+  display: inline-block;
+  position: absolute;
+  width: 196px;
+  height: 22px;
+  padding-bottom: 15px;
+  right: 0;
+  text-align: center;
+  background: #fff;
+  color: #000;
+}
+#main_r #zc span {
+  width: 55px;
+  height: 2px;
+  position: absolute;
+  right: 70px;
+  bottom: 0;
+  background: #000;
+}
+
+#main_b {
+  padding: 30px 0 0 36px;
+  width: 362px;
+  border: 1px solid #ccc;
+  height: 489px;
+}
+
+.ipt {
+  width: 312px;
+  height: 40px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  padding-left: 30px;
+  outline: none;
+}
+
+.lab {
+  display: block;
+  visibility: hidden;
+}
+.lab i {
+  font-size: 12px;
+  color: red;
+}
+
+#oDiv_ipt input {
+  padding-left: 15px;
+}
+
+#oDiv2_ipt {
+  width: 362px;
+  height: 40px;
+  position: absolute;
+  top: 160px;
+}
+#oDiv2_ipt input {
+  padding-left: 15px;
+}
+#oDiv2_ipt #change {
+  position: absolute;
+  right: 40px;
+  display: block;
+  width: 36px;
+  font-size: 12px;
+  color: #000;
+}
+#oDiv2_ipt span {
+  display: block;
+  width: 170px;
+  height: 40px;
+  position: absolute;
+  right: 40px;
+  top: 20px;
+  border: 1px solid #ccc;
+}
+#oDiv2_ipt #oDiv2_ipt_1 {
+  position: absolute;
+  top: 20px;
+  width: 120px;
+  height: 40px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+}
+#oDiv2_ipt #oDiv2_ipt_1 input {
+  width: 105px;
+  border: 0;
+}
+
+#oDiv3_ipt {
+  position: absolute;
+  width: 363px;
+  top: 244px;
+}
+#oDiv3_ipt #oDiv3_ipt_1 {
+  width: 162px;
+  height: 40px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+}
+#oDiv3_ipt #oDiv3_ipt_1 input {
+  padding-left: 15px;
+  width: 147px;
+  border: 0;
+}
+#oDiv3_ipt #oDiv3_ipt_2 {
+  position: absolute;
+  right: 40px;
+  top: 0;
+  border: 1px solid #ccc;
+  width: 150px;
+  height: 40px;
+  border-radius: 5px;
+}
+#oDiv3_ipt #dm {
+  width: 150px;
+  height: 40px;
+  outline: none;
+  border: 0;
+  border-radius: 5px;
+  background: #fff;
+}
+#oDiv3_ipt #dm:hover {
+  background: red;
+}
+
+#oDiv4_ipt {
+  position: absolute;
+  top: 309px;
+}
+#oDiv4_ipt input {
+  width: 297px;
+}
+#oDiv4_ipt #oDiv4_ipt_img {
+  position: absolute;
+  left: 10px;
+  top: 12px;
+}
+
+#oDiv5_ipt {
+  position: absolute;
+  top: 374px;
+}
+#oDiv5_ipt input {
+  width: 297px;
+}
+#oDiv5_ipt #oDiv5_ipt_img {
+  position: absolute;
+  left: 10px;
+  top: 12px;
+}
+
+#oDiv6_ipt {
+  position: absolute;
+  top: 449px;
+  width: 312px;
+  height: 40px;
+  border-radius: 5px;
+  border: 1px solid #e30165;
+}
+#oDiv6_ipt #Btn {
+  width: 312px;
+  height: 40px;
+  border: 0;
+  color: #fff;
+  background: #e30165;
+}
+
+#oDiv7_ipt {
+  position: absolute;
+  bottom: 32px;
+}
+#oDiv7_ipt p {
+  display: inline-block;
+  font-size: 12px;
+}
+
+#footer {
+  height: 44px;
+  padding-top: 78px;
+  width: 1016px;
+  margin: 0 auto;
+  text-align: center;
+}
+#footer a {
+  font-size: 12px;
+  color: #888888;
+}
+#footer p {
+  font-size: 12px;
+  color: #989898;
+}
+
+/*# sourceMappingURL=register.css.map */

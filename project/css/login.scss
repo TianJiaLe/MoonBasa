@@ -1,0 +1,179 @@
+body,ul,input,p{margin: 0;padding: 0;}
+
+
+body{background: #cecccf;}
+img{vertical-align: middle;}
+a{text-decoration: none;}
+i{font-style:normal;}
+
+#wrap{
+	width: 100%;
+	#header{
+		display: block;
+		width: 1016px;
+		margin: 0 auto;
+	}
+}
+#main{
+	margin: 0 auto;
+	width: 1016px;
+	height: 520px;
+	background: #fff;
+}
+#main_l{
+	float: left;
+	width: 505px;
+	height: 520px;
+}
+#main_l img{
+	margin:29px 0 0 84px;
+}
+#main_r{
+	width: 400px;
+	height: 520px;
+	position: relative;
+	float: left;
+	#dl{
+		margin-top:22px;
+		display: inline-block;
+		position: absolute;
+		width: 196px;
+		height: 22px;
+		padding-bottom: 15px;
+		text-align: center;
+		background: #fff;
+		color: #000;
+		span{
+			width: 55px;
+			height: 2px;
+			position: absolute;
+			right: 70px;
+			bottom: 0;
+			background: #000;
+		}
+	}
+	#zc{
+		margin-top:22px;
+		display: inline-block;
+		position: absolute;
+		width: 196px;
+		height: 22px;
+		padding-bottom: 15px;
+		right: 0;
+		text-align: center;
+		background: #fff;
+		color: #000;
+		span{
+			width: 55px;
+			height: 2px;
+			position: absolute;
+			right: 70px;
+			bottom: 0;
+			background: #000;
+		}
+	}
+}
+#main_r_box{
+	position: absolute;
+	top:59px;
+	padding: 30px 0 0 34px;
+	width: 364px;
+	height: 406px;
+	border: 1px solid #000;
+}
+#plogin{
+	width: 322px;
+	height: 300px;
+	/*border: 1px solid #000;*/
+	position: absolute;
+	#plogin_1{
+		#plogin_1_img{
+			position: absolute;
+			top: 10px;
+			left: 10px;
+		}
+		width: 322px;
+		height: 40px;
+		border: 1px solid #ccc;
+		border-radius: 5px;
+		.ipt{
+			padding-left: 30px;
+			border-radius: 5px;
+			width: 292px;
+			height: 40px;
+			border: 0;
+			outline: none;
+		}
+		.lab{
+			position: absolute;
+			top:45px;
+			font-size: 12px;
+		}
+	}
+	#plogin_2{
+		position: absolute;
+		top: 67px;
+		#plogin_2_img{
+			position: absolute;
+			top: 10px;
+			left: 10px;
+		}
+		width: 322px;
+		height: 40px;
+		border: 1px solid #ccc;
+		border-radius: 5px;
+		.ipt{
+			padding-left: 30px;
+			border-radius: 5px;
+			width: 292px;
+			height: 40px;
+			border: 0;
+			outline: none;
+		}
+		.lab{
+			position: absolute;
+			top:45px;
+			font-size: 12px;
+		}
+	}
+	
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+#footer{
+	height:44px;
+	padding-top:78px;
+	width: 1016px;
+	margin: 0 auto;
+	text-align:center;
+	a{
+		font-size:12px;
+		color:#888888;
+	}
+	p{
+		font-size:12px;
+		color:#989898;
+	}
+}
