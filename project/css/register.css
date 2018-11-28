@@ -1,0 +1,27 @@
+body,ul{margin: 0;padding: 0;}
+
+
+body{background: #cecccf;}
+img{vertical-align: middle;}
+a{text-decoration: none;}
+
+
+#wrap{
+	width: 100%;
+}
+#wrap a{
+	display: block;
+	width: 1016px;
+	margin: 0 auto;
+}
+#main{
+	margin: 0 auto;
+	width: 1016px;
+	height: 563px;
+	background: #fff;
+}
+#main_l{
+	width: 505px;
+	height: 563px;
+	background: red;
+}
