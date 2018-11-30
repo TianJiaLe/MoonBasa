@@ -80,34 +80,33 @@ i{font-style:normal;}
 	border: 1px solid #ccc;
 	height: 489px;
 }
-.ipt{
-	width: 312px;
-	height: 40px;
-	border-radius: 5px;
-	border: 1px solid #ccc;
-	padding-left:30px;
-	outline:none
-}
-.lab{
-	display:block;
-	visibility:hidden;
-	i{
-		font-size:12px;
-		color:red;
-	}
-}
 #oDiv_ipt{
-	input{
-		padding-left:15px;
+	position:relative;
+	.ipt{
+		width: 297px;
+		height: 40px;
+		border-radius: 5px;
+		border: 1px solid #ccc;
+		padding-left:30px;
+		outline:none
+	}
+	.lab{
+		display:block;
+		visibility:hidden;
+		i{
+			font-size:12px;
+			color:red;
+		}
+	}
+	#oDiv_ipt_img{
+		position:absolute;
+		top:10px;
+		left:10px;
 	}
 }
 #oDiv2_ipt{
 	width:362px;
 	height:40px;
-
-	input{
-		padding-left:15px;
-	}
 	position:absolute;
 	top:160px;
 	#change{
@@ -120,12 +119,15 @@ i{font-style:normal;}
 	}
 	span{
 	    display:block;
-		width:170px;
+		width:191px;
 		height:40px;
 		position:absolute;
 		right:40px;
 		top:20px;
 		border:1px solid #ccc;
+		text-align:center;
+		line-height:40px;
+		font-size:20px;
 	}
 	#oDiv2_ipt_1{
 		position:absolute;
@@ -134,9 +136,21 @@ i{font-style:normal;}
 		height: 40px;
 		border-radius: 5px;
 		border: 1px solid #ccc;
-		input{
-			width:105px;
-			border:0;
+		.ipt_1{
+			width: 105px;
+			height: 40px;
+			border-radius: 5px;
+			border: 0;
+			padding-left:15px;
+			outline:none
+		}
+		.lab_1{
+			display:block;
+			visibility:hidden;
+			i{
+				font-size:12px;
+				color:red;
+			}
 		}
 	}
 }
@@ -149,10 +163,21 @@ i{font-style:normal;}
 		height: 40px;
 		border-radius: 5px;
 		border: 1px solid #ccc;
-		input{
+		.ipt_2{
+			width: 147px;
+			height: 40px;
+			border-radius: 5px;
+			border: 0;
 			padding-left:15px;
-			width:147px;
-			border:0;
+			outline:none
+		}
+		.lab_2{
+			display:block;
+			visibility:hidden;
+			i{
+				font-size:12px;
+				color:red;
+			}
 		}
 	}
 	#oDiv3_ipt_2{
@@ -177,8 +202,21 @@ i{font-style:normal;}
 	}
 }
 #oDiv4_ipt{
-	input{
-		width:297px;
+	.ipt_3{
+		width: 297px;
+		height: 40px;
+		border-radius: 5px;
+		border: 1px solid #ccc;
+		padding-left:30px;
+		outline:none
+	}
+	.lab_3{
+		display:block;
+		visibility:hidden;
+		i{
+			font-size:12px;
+			color:red;
+		}
 	}
 	position:absolute;
 	top:309px;
@@ -189,8 +227,21 @@ i{font-style:normal;}
 	}
 }
 #oDiv5_ipt{
-	input{
-		width:297px;
+	.ipt_4{
+		width: 297px;
+		height: 40px;
+		border-radius: 5px;
+		border: 1px solid #ccc;
+		padding-left:30px;
+		outline:none;
+	}
+	.lab_4{
+		display:block;
+		visibility:hidden;
+		i{
+			font-size:12px;
+			color:red;
+		}
 	}
 	position:absolute;
 	top:374px;
@@ -213,6 +264,7 @@ i{font-style:normal;}
 		border:0;
 		color:#fff;
 		background:#e30165;
+		outline:none;
 	}
 }
 #oDiv7_ipt{

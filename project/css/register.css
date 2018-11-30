@@ -94,26 +94,29 @@ i {
   height: 489px;
 }
 
-.ipt {
-  width: 312px;
+#oDiv_ipt {
+  position: relative;
+}
+#oDiv_ipt .ipt {
+  width: 297px;
   height: 40px;
   border-radius: 5px;
   border: 1px solid #ccc;
   padding-left: 30px;
   outline: none;
 }
-
-.lab {
+#oDiv_ipt .lab {
   display: block;
   visibility: hidden;
 }
-.lab i {
+#oDiv_ipt .lab i {
   font-size: 12px;
   color: red;
 }
-
-#oDiv_ipt input {
-  padding-left: 15px;
+#oDiv_ipt #oDiv_ipt_img {
+  position: absolute;
+  top: 10px;
+  left: 10px;
 }
 
 #oDiv2_ipt {
@@ -121,9 +124,6 @@ i {
   height: 40px;
   position: absolute;
   top: 160px;
-}
-#oDiv2_ipt input {
-  padding-left: 15px;
 }
 #oDiv2_ipt #change {
   position: absolute;
@@ -135,12 +135,15 @@ i {
 }
 #oDiv2_ipt span {
   display: block;
-  width: 170px;
+  width: 191px;
   height: 40px;
   position: absolute;
   right: 40px;
   top: 20px;
   border: 1px solid #ccc;
+  text-align: center;
+  line-height: 40px;
+  font-size: 20px;
 }
 #oDiv2_ipt #oDiv2_ipt_1 {
   position: absolute;
@@ -150,9 +153,21 @@ i {
   border-radius: 5px;
   border: 1px solid #ccc;
 }
-#oDiv2_ipt #oDiv2_ipt_1 input {
+#oDiv2_ipt #oDiv2_ipt_1 .ipt_1 {
   width: 105px;
+  height: 40px;
+  border-radius: 5px;
   border: 0;
+  padding-left: 15px;
+  outline: none;
+}
+#oDiv2_ipt #oDiv2_ipt_1 .lab_1 {
+  display: block;
+  visibility: hidden;
+}
+#oDiv2_ipt #oDiv2_ipt_1 .lab_1 i {
+  font-size: 12px;
+  color: red;
 }
 
 #oDiv3_ipt {
@@ -166,10 +181,21 @@ i {
   border-radius: 5px;
   border: 1px solid #ccc;
 }
-#oDiv3_ipt #oDiv3_ipt_1 input {
-  padding-left: 15px;
+#oDiv3_ipt #oDiv3_ipt_1 .ipt_2 {
   width: 147px;
+  height: 40px;
+  border-radius: 5px;
   border: 0;
+  padding-left: 15px;
+  outline: none;
+}
+#oDiv3_ipt #oDiv3_ipt_1 .lab_2 {
+  display: block;
+  visibility: hidden;
+}
+#oDiv3_ipt #oDiv3_ipt_1 .lab_2 i {
+  font-size: 12px;
+  color: red;
 }
 #oDiv3_ipt #oDiv3_ipt_2 {
   position: absolute;
@@ -196,8 +222,21 @@ i {
   position: absolute;
   top: 309px;
 }
-#oDiv4_ipt input {
+#oDiv4_ipt .ipt_3 {
   width: 297px;
+  height: 40px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  padding-left: 30px;
+  outline: none;
+}
+#oDiv4_ipt .lab_3 {
+  display: block;
+  visibility: hidden;
+}
+#oDiv4_ipt .lab_3 i {
+  font-size: 12px;
+  color: red;
 }
 #oDiv4_ipt #oDiv4_ipt_img {
   position: absolute;
@@ -209,8 +248,21 @@ i {
   position: absolute;
   top: 374px;
 }
-#oDiv5_ipt input {
+#oDiv5_ipt .ipt_4 {
   width: 297px;
+  height: 40px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  padding-left: 30px;
+  outline: none;
+}
+#oDiv5_ipt .lab_4 {
+  display: block;
+  visibility: hidden;
+}
+#oDiv5_ipt .lab_4 i {
+  font-size: 12px;
+  color: red;
 }
 #oDiv5_ipt #oDiv5_ipt_img {
   position: absolute;
@@ -232,6 +284,7 @@ i {
   border: 0;
   color: #fff;
   background: #e30165;
+  outline: none;
 }
 
 #oDiv7_ipt {

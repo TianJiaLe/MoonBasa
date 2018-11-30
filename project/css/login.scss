@@ -52,7 +52,7 @@ i{font-style:normal;}
 			background: #000;
 		}
 	}
-	#zc{
+	#npwd{
 		margin-top:22px;
 		display: inline-block;
 		position: absolute;
@@ -62,7 +62,7 @@ i{font-style:normal;}
 		right: 0;
 		text-align: center;
 		background: #fff;
-		color: #000;
+		color: #9f9f9f;
 		span{
 			width: 55px;
 			height: 2px;
@@ -70,6 +70,7 @@ i{font-style:normal;}
 			right: 70px;
 			bottom: 0;
 			background: #000;
+			display:none;
 		}
 	}
 }
@@ -79,11 +80,18 @@ i{font-style:normal;}
 	padding: 30px 0 0 34px;
 	width: 364px;
 	height: 406px;
-	border: 1px solid #000;
+	border: 1px solid #ccc;
+	#ewm{
+		width:52px;
+		height:52px;
+		position:absolute;
+		top:0;
+		right:0;
+		background:url(../img/ewm2.jpg);
+	}
 }
 #plogin{
 	width: 322px;
-	height: 300px;
 	/*border: 1px solid #000;*/
 	position: absolute;
 	#plogin_1{
@@ -91,6 +99,12 @@ i{font-style:normal;}
 			position: absolute;
 			top: 10px;
 			left: 10px;
+		}
+		#plogin_1_img2{
+			display:none;
+			position: absolute;
+			top: 14px;
+			right:10px;
 		}
 		width: 322px;
 		height: 40px;
@@ -105,8 +119,9 @@ i{font-style:normal;}
 			outline: none;
 		}
 		.lab{
+			display:none;
 			position: absolute;
-			top:45px;
+			top:43px;
 			font-size: 12px;
 		}
 	}
@@ -118,6 +133,12 @@ i{font-style:normal;}
 			top: 10px;
 			left: 10px;
 		}
+		#plogin_2_img2{
+			display:none;
+			position: absolute;
+			top: 14px;
+			right:10px;
+		}
 		width: 322px;
 		height: 40px;
 		border: 1px solid #ccc;
@@ -130,37 +151,216 @@ i{font-style:normal;}
 			border: 0;
 			outline: none;
 		}
-		.lab{
+		.lab_1{
 			position: absolute;
-			top:45px;
+			top:43px;
+			font-size: 12px;
+			display:none;
+		}
+	}
+	#plogin_3{
+		display:none;
+		width:322px;
+		position:absolute;
+		top:135px;
+		#change1{
+			color:#797979;
+			font-size:12px;
+			position:absolute;
+			top:0;
+			right:0;
+		}
+		.lab_2{
+			position: absolute;
+			top:60px;
+			font-size: 12px;
+			display:none;
+		}
+		#plogin_3_yzm{
+		    position:absolute;
+		    top:19px;
+			width:120px;
+			height:40px;
+			border: 1px solid #ccc;
+			border-radius: 5px;
+			input{
+				padding-left:10px;
+				width:110px;
+				height:40px;
+				outline:none;
+				border:0;
+				border-radius: 5px;
+			}
+		}
+		span{
+			position:absolute;
+			top:19px;
+			right:0;
+			display:block;
+			width:191px;
+			height:40px;
+			border:1px solid #000;
+			text-align:center;
+			line-height:40px;
+			font-size:20px;
+			color:#fff;
+		}
+	}
+}
+#plogin2{
+	display:none;
+	position:absolute;
+	width: 322px;
+	height:300px;
+	#plogin2_1{
+		#plogin2_1_img{
+			position: absolute;
+			top: 10px;
+			left: 10px;
+		}
+		width: 322px;
+		height: 40px;
+		border: 1px solid #ccc;
+		border-radius: 5px;
+		.ipt1{
+			padding-left: 30px;
+			border-radius: 5px;
+			width: 292px;
+			height: 40px;
+			border: 0;
+			outline: none;
+		}
+		.lab1{
+			display:none;
+			position: absolute;
+			top:43px;
 			font-size: 12px;
 		}
 	}
-	
+	#plogin2_2{
+		width:322px;
+		position:absolute;
+		top:70px;
+		#change2{
+			color:#797979;
+			font-size:12px;
+			position:absolute;
+			top:0;
+			right:0;
+		}
+		#plogin2_3_yzm{
+		    position:absolute;
+		    top:19px;
+			width:120px;
+			height:40px;
+			border: 1px solid #ccc;
+			border-radius: 5px;
+			input{
+				padding-left:10px;
+				width:110px;
+				height:40px;
+				outline:none;
+				border:0;
+				border-radius: 5px;
+			}
+		}
+		.lab2{
+			display:none;
+			position: absolute;
+			top:62px;
+			font-size: 12px;
+		}
+		span{
+			position:absolute;
+			top:19px;
+			right:0;
+			display:block;
+			width:191px;
+			height:40px;
+			border:1px solid #000;
+			text-align:center;
+			line-height:40px;
+			color:#fff;
+		}
+	}
+	#plogin2_3{
+		width:322px;
+		position:absolute;
+		top:154px;
+		#plogin2_3_dt{
+			width:180px;
+			height:40px;
+			border-radius: 5px;
+			border:1px solid #ccc;
+			#plogin2_3_dt_img{
+				position:absolute;
+				top:10px;
+				left:10px;
+			}
+			input{
+				padding-left:30px;
+				border-radius: 5px;
+				width:150px;
+				height:40px;
+				border:0;
+				outline:none;
+			}
+		}
+		#plogin2_3_dbtn{
+			width:132px;
+			height:42px;
+			position:absolute;
+			top:0;
+			right:0;
+			border-radius: 5px;
+			input{
+				width:132px;
+				height:42px;
+				border:0;
+				border-radius: 5px;
+				background:#ff9cb1;
+				color:#fff;
+				outline:none;
+			}
+		}
+	}
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+.fpwd{
+	position:absolute;
+	bottom:258px;
+	font-size:12px;
+	color:#666666;
+}
+.register{
+	position:absolute;
+	bottom:258px;
+	right:40px;
+	font-size:12px;
+	color:#e50065;
+}
+#btn{
+	width:322px;
+	height:40px;
+	border:1px solid #e30165;
+	border-radius: 5px;
+	position:absolute;
+	bottom:203px;
+	input{
+		border:0;
+		width:322px;
+		height:40px;
+		outline:none;
+		background:#e30165;
+		border-radius: 5px;
+		color:#fff;
+	}
+}
+#other_login{
+	position:absolute;
+	bottom:42px;
+	font-size:12px;
+	color:#6f6f6f;
+}
 
 #footer{
 	height:44px;

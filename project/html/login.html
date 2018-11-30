@@ -19,34 +19,74 @@
 					普通登录
 					<span></span>
 				</a>
-				<a id="zc" href="#">
+				<a id="npwd" href="#">
 					无密码登录
 					<span></span>
 				</a>
 				<div id="main_r_box">
+					<div id="ewm"></div>
 					<div id="plogin">
 						<div id="plogin_1">
 							<img id="plogin_1_img" src="../img/user.jpg">
-							<input class="ipt" type="text" placeholder="手机号/邮箱/会员卡号">
+							<img id="plogin_1_img2" src="../img/scuess.jpg">
+							<input class="ipt" type="text" id="uname" placeholder="手机号/邮箱/会员卡号">
 							<label class="lab"><img src="../img/small_bar.jpg"><i>手机号/邮箱/会员卡号不能为空</i></label>
 						</div>
 						<div id="plogin_2">
 							<img id="plogin_2_img" src="../img/suozi.jpg">
-							<input class="ipt" type="text" placeholder="手机号/邮箱/会员卡号">
-							<label class="lab"><img src="../img/small_bar.jpg"><i>手机号/邮箱/会员卡号不能为空</i></label>
+							<img id="plogin_2_img2" src="../img/scuess.jpg">
+							<input class="ipt" type="password" id="upwd" placeholder="密码">
+							<label class="lab_1"><img src="../img/small_bar.jpg"><i>密码不能为空</i></label>
 						</div>
-						<a href="#">忘记密码</a>
-						<a href="#">注册</a>
+						<div id="plogin_3">
+							<a id="change1" href="#">换一张</a>
+							<div id="plogin_3_yzm">
+								<input id="Yzm" type="text" placeholder="验证码">
+							</div>
+							<label class="lab_2"><img src="../img/small_bar.jpg"><i>请输入验证码</i></label>
+							<span></span>
+						</div>
+					</div>
+					<div id="plogin2">
+						<div id="plogin2_1">
+							<img id="plogin2_1_img" src="../img/user.jpg">
+							<input class="ipt1" type="text" placeholder="输入手机号">
+							<label class="lab1"><img src="../img/small_bar.jpg"><i>手机号不能为空</i></label>
+						</div>
+						<div id="plogin2_2">
+							<a id="change2" href="#">换一张</a>
+							<div id="plogin2_3_yzm">
+								<input type="text" placeholder="验证码">
+							</div>
+							<label class="lab2"><img src="../img/small_bar.jpg"><i>手机号不能为空</i></label>
+							<span></span>
+						</div>
+						<div id="plogin2_3">
+							<div  id="plogin2_3_dt">
+								<img id="plogin2_3_dt_img" src="../img/suozi.jpg">
+								<input type="text" placeholder="动态口令">
+							</div>
+							<div  id="plogin2_3_dbtn">
+								<input type="button" value="获取手机动态口令">
+							</div>
+						</div>
+						
+					</div>
+					<a class="fpwd" href="#">忘记密码?</a>
+					<a class="register" href="register.html">注册</a>
+					<div id="btn">
+						<input type="button" value="立即登录">
+					</div>
+					<div id="other_login">
+						其他登录方式：
+						<a href="#"><img src="../img/wx.jpg"></a>
+						<a href=""><img src="../img/qq.jpg"></a>
+						<a href=""><img src="../img/zfb.jpg"></a>
+						<a href=""><img src="../img/wb.jpg"></a>
 					</div>
 				</div>
 			</div>
 		</div>
-
-
-
-
-
-
 		<div id="footer">
 			<a href="#">首页</a>
 			<a href="#">公司简介</a>
@@ -64,3 +104,6 @@
 	</div>
 </body>
 </html>
+<script src="../js/jquery-1.11.1.js"></script>
+<script src="../js/public.js"></script>
+<script src="../js/login.js"></script>
