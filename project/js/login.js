@@ -27,8 +27,8 @@ $("#change2").click(function(){
 })
 var flagTel = null;
 $("#uname").blur(function(){
-	var reguname = /^[a-z_]\w{5,11}$/i;
-	var reguname2 = /^1[538]\d{9}$/;
+	var reguname = /^1[538]\d{9}$/;
+	var reguname2 = /^\w+@\w+(\.\w+)+$/;
 	var userTel = $("#uname").val();
 	console.log($("#uname").val());
 	if (userTel=="") {
@@ -85,6 +85,7 @@ $("#btn").click(function(){
 				var res = ajax.responseText;
 				if (res==1) {
 					alert("登录成功");
+					location.href="../index.html";
 				}else if (res==2) {
 					alert("密码错误");
 				}else if (res==0) {

@@ -20,6 +20,33 @@ $(".ipt").blur(function(){
 	}
 })
 
+// new fName().init();
+// console.log(new fName().init();
+// function fName(){
+// 	this.body=$(".ipt");
+// 	this.flagname=null;
+// 	this.lab=$(".lab");
+// 	this.reguname2 = /^1[538]\d{9}$/;
+// 	this.regEmail = /^\w+@\w+(\.\w+)+$/;
+// 	this.oipt=$("#oDiv_ipt");
+// 	this.init=function(){
+// 		this.body.blur(function(){
+// 			if (this.body.val()=="") {
+// 				this.lab.css("visibility","visible");
+// 			}else{
+// 				if (this.reguname2.test(this.body.val())||this.regEmail.test(this.body.val())) {
+// 					this.flagname=true;
+// 					this.lab.css("visibility","hidden");
+// 				}else{
+// 					this.flagname=false;
+// 					this.oipt.find(".lab").css("visibility","visible").end().find("i").html("你输入的手机号或邮箱不符合规范！");
+// 				}
+// 			}
+// 			return this.flagname;
+// 		}.bind(this))
+// 	}
+// }
+
 var flagYzm=null;
 $(".ipt_1").blur(function(){
 	if ($(".ipt_1").val()=="") {
@@ -74,8 +101,8 @@ $(".ipt_4").blur(function(){
 
 
 $("#Btn").click(function(){
-	console.log(flagqpwd,flagpwd,flagYzm,flagname);
-	if (flagqpwd&&flagpwd&&flagYzm&&flagname) {
+	console.log($("#check").prop("checked"));
+	if (flagqpwd/*&&flagpwd&&flagYzm&&flagname&&$("#check").prop("checked"*/){
 		var ajax = new XMLHttpRequest();
 		ajax.open("get","../php/login_register.php?"+`status=register&uname=${$(".ipt").val()}&upwd=${$(".ipt_3").val()}`);
 		ajax.send();
@@ -86,7 +113,7 @@ $("#Btn").click(function(){
 					alert("该用户已被注册");
 				}else if (res==1) {
 					alert("注册成功");
-					location.href="../index.html";
+					location.href="login.html";
 				}else if (res==2) {
 					alert("注册失败");
 				}
