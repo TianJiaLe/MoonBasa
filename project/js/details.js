@@ -61,14 +61,15 @@ function blist(){
     this.body=$(".banner_ul");
     this.bleft=$(".banner_l");
     this.bright=$(".banner_r");
-    this.list=$(".banner_ul li");
+    this.list=$(".banner_ul");
     this.big=$(".banner_big");
+    this.largeimg=$(".banner_large");
     var that = this;
-    that.img=$(".banner_big img");
+    that.img=$(".banner_big");
     this.fdj=$(".fdj");
     this.large=$(".banner_large");
-    that.largeimg=$(".banner_large img");
-    this.limg=$(".largeimg");
+    that.largeimg=$(".banner_large");
+    this.box=$(".bdiv");
     this.init=function(){
         this.bright.click(function(){
             this.body.stop().animate({"left":-70},500);
@@ -88,15 +89,15 @@ function blist(){
         return this;
     }
     this.mouse=function(){
-        this.list.mouseenter(function(){
+        this.list.on("mouseenter","li",function(){
             $(this).css("border","1px solid #000").siblings().css("border","1px solid #fff");
-            that.img.eq($(this).index()).css("display","block").siblings().css("display","none");
-            that.largeimg.eq($(this).index()).css("display","block").siblings().css("display","none");
+            that.img.find("img").eq($(this).index()).css("display","block").siblings().css("display","none");
+            that.largeimg.find("img").eq($(this).index()).css("display","block").siblings().css("display","none");
         })
         return this;
     }
     this.show=function(){
-        this.big.mouseenter(function(){
+        this.box.mouseenter(function(){
             this.fdj.css("display","block");
             this.large.css("display","block");
         }.bind(this)).mouseleave(function(){
@@ -106,7 +107,7 @@ function blist(){
         return this;
     }
     this.move=function(){
-        this.big.mousemove(function(e){
+        this.box.mousemove(function(e){
             var x = e.pageX -  this.fdj.width()/2 - this.big.offset().left;
             var y = e.pageY -  this.fdj.height()/2 - this.big.offset().top;
             var maxL = this.big.width()-this.fdj.width();
@@ -114,39 +115,328 @@ function blist(){
             var x = x < 0 ? 0 : ( x > maxL ? maxL : x);
             var y = y < 0 ? 0 : ( y > maxT ? maxT : y);
 
-            var x1 = x*(this.limg.eq(0).width() - this.large.width())/(this.big.width()-this.fdj.width());
-            var y1 = y*(this.limg.eq(0).height() - this.large.height())/(this.big.height()-this.fdj.height());
-            this.limg.css({"left":-x1,"top":-y1});
+            var x1 = x*(this.largeimg.find("img").eq(0).width() - this.large.width())/(this.big.width()-this.fdj.width());
+            var y1 = y*(this.largeimg.find("img").eq(0).height() - this.large.height())/(this.big.height()-this.fdj.height());
+            this.largeimg.find("img").css({"left":-x1,"top":-y1});
             this.fdj.css({"left":x,"top":y})
         }.bind(this))
     }
 }
 
+
+
+// new blist().init().mouse().show().move();
+// function blist(){
+//     this.body=$(".banner_ul");
+//     this.bleft=$(".banner_l");
+//     this.bright=$(".banner_r");
+//     this.list=$(".banner_ul li");
+//     this.big=$(".banner_big");
+//     var that = this;
+//     that.img=$(".banner_big img");
+//     this.fdj=$(".fdj");
+//     this.large=$(".banner_large");
+//     that.largeimg=$(".banner_large img");
+//     this.limg=$(".largeimg");
+//     this.init=function(){
+//         this.bright.click(function(){
+//             this.body.stop().animate({"left":-70},500);
+//         }.bind(this)).mouseenter(function(){
+//             $(this).stop().animate({"opacity":1},500);
+//         }).mouseleave(function(){
+//             $(this).stop().animate({"opacity":0.5},500);
+//         })
+
+//         this.bleft.click(function(){
+//             this.body.stop().animate({"left":0},500);
+//         }.bind(this)).mouseenter(function(){
+//             $(this).stop().animate({"opacity":1},500);
+//         }).mouseleave(function(){
+//             $(this).stop().animate({"opacity":0.5},500);
+//         })
+//         return this;
+//     }
+//     this.mouse=function(){
+//         this.list.mouseenter(function(){
+//             $(this).css("border","1px solid #000").siblings().css("border","1px solid #fff");
+//             that.img.eq($(this).index()).css("display","block").siblings().css("display","none");
+//             that.largeimg.eq($(this).index()).css("display","block").siblings().css("display","none");
+//         })
+//         return this;
+//     }
+//     this.show=function(){
+//         this.big.mouseenter(function(){
+//             this.fdj.css("display","block");
+//             this.large.css("display","block");
+//         }.bind(this)).mouseleave(function(){
+//             this.fdj.css("display","none");
+//             this.large.css("display","none");
+//         }.bind(this))
+//         return this;
+//     }
+//     this.move=function(){
+//         this.big.mousemove(function(e){
+//             var x = e.pageX -  this.fdj.width()/2 - this.big.offset().left;
+//             var y = e.pageY -  this.fdj.height()/2 - this.big.offset().top;
+//             var maxL = this.big.width()-this.fdj.width();
+//             var maxT = this.big.height()-this.fdj.height();
+//             var x = x < 0 ? 0 : ( x > maxL ? maxL : x);
+//             var y = y < 0 ? 0 : ( y > maxT ? maxT : y);
+
+//             var x1 = x*(this.limg.eq(0).width() - this.large.width())/(this.big.width()-this.fdj.width());
+//             var y1 = y*(this.limg.eq(0).height() - this.large.height())/(this.big.height()-this.fdj.height());
+//             this.limg.css({"left":-x1,"top":-y1});
+//             this.fdj.css({"left":x,"top":y})
+//         }.bind(this))
+//     }
+// }
 //轮播图
 new movelist().init();
 function movelist(){
     this.body=$(".banner_d2_b_ul");
+    this.li=$(".banner_d2_b_ul li");
     this.down=$(".banner_btn1");
     this.add=$(".banner_btn2");
     this.index=0;
     this.init=function(){
         this.down.click(function(){
             this.index--;
-            if (this.index<=0) {
-                this.body.stop().animate({"top":-this.index*546});
+            if (this.index>=0) {
+                this.body.stop().animate({"top":-this.index*this.li.eq(0).height()*3});
+            }else{
+                this.index++;
             }
-            console.log(this.index*546);
-        }.bind(this))
+        }.bind(this)).mouseenter(function(){
+            $(this).stop().animate({"opacity":1});
+        }).mouseleave(function(){
+            $(this).stop().animate({"opacity":0.5});
+        })
 
         this.add.click(function(){
             this.index++;
-            if (this.index<=(this.body.height()-546)/546) {
-                this.body.stop().animate({"top":-this.index*546});
+            if (this.index<=( this.body.height()-this.li.eq(0).height()*3 )/(this.li.eq(0).height()*3) ) {
+                this.body.stop().animate({"top":-this.index*this.li.eq(0).height()*3});
+            }else{
+                this.index--;
             }
-        }.bind(this))
+        }.bind(this)).mouseenter(function(){
+            $(this).stop().animate({"opacity":1});
+        }).mouseleave(function(){
+            $(this).stop().animate({"opacity":0.5});
+        })
     }
 }
 
+//获取信息
+new picture().number().init(). getCount();
+function picture(){
+    this.body=location.href;
+    this.mid=this.body.split("=")[1];
+    this.Btn=$(".b_box2_div3_span2");
+    this.add=$(".add");
+    this.car=$(".rightbar_div");
+    var that = this;
+    this.rnum=$(".rightbar_num");
+    that.num=0;
+    this.number=function(){
+        this.add.click(function(){
+			//获取当前数量
+            var count=$(this).parent().find(".bbox2d2_div_b").html();
+            
+			//获取当前的操作符
+			var sign = $(this).html();
+			//如果数量为一不能实现减法操作
+			if (count==1&&sign=="-") {
+				return;
+			}else if(sign=="+"){
+                that.num++;
+                $(this).parent().find(".bbox2d2_div_b").html(parseInt(that.num));
+            }else if(sign=="-"){
+                that.num--
+                $(this).parent().find(".bbox2d2_div_b").html(parseInt(that.num));
+            }
+        })
+        return this;
+    }
+    this.init=function(){
+        $.ajax({
+            type:"get",
+            url:"../json/shop.json",
+            async:true,
+            success:function(msg){
+                var str="";
+                var stu="";
+                var stb="";
+                var std="";
+                var stc="";
+                var stt="";
+                for (var i = 0; i < msg.length; i++) {
+                    if (this.mid==msg[i].src) {
+
+                        str=`<img src="../img/${msg[i].b1}" alt="" style="z-index:6">
+                        <img src="../img/${msg[i].b2}" alt="" style="z-index:5">
+                        <img src="../img/${msg[i].b3}" alt="" style="z-index:4">
+                        <img src="../img/${msg[i].b4}" alt="" style="z-index:3">
+                        <img src="../img/${msg[i].b5}" alt="" style="z-index:2">
+                        <img src="../img/${msg[i].b6}" alt="" style="z-index:1">`;
+
+
+                        stu=`<li class="banner_ul_l1"><img src="../img/${msg[i].s1}" alt=""></li>
+                        <li><img src="../img/${msg[i].s2}" alt=""></li>
+                        <li><img src="../img/${msg[i].s3}" alt=""></li>
+                        <li><img src="../img/${msg[i].s4}" alt=""></li>
+                        <li><img src="../img/${msg[i].s5}" alt=""></li>
+                        <li><img src="../img/${msg[i].s6}" alt=""></li>`;
+
+
+                        stb=`<img class="largeimg" src="../img/${msg[i].l1}" alt="" style="z-index:6">
+                        <img class="largeimg"  src="../img/${msg[i].l2}" alt="" style="z-index:5">
+                        <img class="largeimg"  src="../img/${msg[i].l3}" alt="" style="z-index:4">
+                        <img class="largeimg"  src="../img/${msg[i].l4}" alt="" style="z-index:3">
+                        <img class="largeimg"  src="../img/${msg[i].l5}" alt="" style="z-index:2">
+                        <img class="largeimg"  src="../img/${msg[i].l6}" alt="" style="z-index:1">`;
+
+                        std=`￥<i class="br_div_span2_i">${msg[i].price1}</i>`;
+                        stc=`<i class="br_span_i">￥</i>
+                        <b class="br_b">${msg[i].nprice}</b>`;
+
+                        stt=`<img class="bbox2d_ul_li_img" src="../img/${msg[i].ss}" alt="">
+                        <a class="bbox2d_ul_li_a" href="#">${msg[i].p3}</a>`;
+                        this.car.click(function(){
+                            location.href="shopcar.html";
+                        })
+                        var a = i;
+                        var arr =[];
+                        this.Btn.click(function(){
+                            $.fnInit(this.Btn,this.car).fnMove(msg[a].ss);
+                            var flag = true;
+                            var json = {};
+                            var crr=[];
+                            var brr=[];
+                            var num =$(".bbox2d2_div_b").html();
+                            json = {
+                                "id" : msg[a].src,
+                                "name": msg[a].p1,
+                                "money" : msg[a].nprice,
+                                "count" : num,
+                            }
+
+                            
+                            // var brr = JSON.parse(localStorage.shoplist);
+                           
+                            
+                            // var obj = JSON.parse(brr.shoplist);
+                            // console.log(obj[0].id);
+                            if(brr.length==0){
+                                crr.push(json);
+                                var brr = JSON.parse(localStorage.getItem("shoplist",JSON.stringify(crr)) );
+                                
+                            }
+                            if(brr){
+                                arr=brr;
+                                for (var i = 0; i < arr.length; i++) {
+                                    if(json.id==arr[i].id){
+                                        arr[i].count=parseInt(num)+JSON.parse(arr[i].count);
+                                        flag = false;
+                                        console.log(arr[i].count);
+                                        break;
+                                        
+                                    }
+
+                                }
+                            }
+                            if (flag) {
+                                arr.push(json);
+                            }
+                            localStorage.setItem("shoplist",JSON.stringify(arr));
+                        }.bind(this))
+                       
+                        
+
+                    }
+                }
+                $(".banner_big").html(str);
+                $(".banner_ul").html(stu);
+                $(".banner_large").html(stb);
+                $(".br_div_span2").html(std);
+                $(".br_span").html(stc);
+                $(".bbox2d_ul_li").html(stt);
+            }.bind(this)
+            
+        })
+        return this;
+    }
+    this.getCount=function(){
+        // console.log(localStorage.length);
+        if(localStorage.length!=0){
+            var brr=JSON.parse(localStorage.shoplist);
+            var count = 0;
+            if (brr.length!=0) {
+                for (var i = 0; i < brr.length; i++) {
+                    count+=brr[i].count;
+                }
+            }
+            this.rnum.html(count);
+        }
+    }
+}
+
+//添加购物车
+
+$.extend({
+    fnInit:function(startObj,endObj){
+        //起始点
+        this.startPoint={
+            x:startObj.offset().left+startObj.width()/2,
+            y:startObj.offset().top
+        }
+        //结束点
+        this.endPoint={
+            x:endObj.offset().left+endObj.width()/2,
+            y:endObj.offset().top
+        }
+        //最高点
+        this.topPoint={
+            x:this.endPoint.x-100,
+            y:this.endPoint.y-60
+        }
+        //确定抛物线系数
+        this.a = ((this.startPoint.y - this.endPoint.y) * (this.startPoint.x - this.topPoint.x) - (this.startPoint.y - this.topPoint.y) * (this.startPoint.x - this.endPoint.x)) / ((this.startPoint.x * this.startPoint.x - this.endPoint.x * this.endPoint.x) * (this.startPoint.x - this.topPoint.x)-(this.startPoint.x * this.startPoint.x - this.topPoint.x * this.topPoint.x) * (this.startPoint.x - this.endPoint.x));  
+                            
+        this.b = ((this.endPoint.y - this.startPoint.y) - this.a * (this.endPoint.x * this.endPoint.x - this.startPoint.x * this.startPoint.x)) / (this.endPoint.x - this.startPoint.x);  
+                            
+        this.c = this.startPoint.y - this.a * this.startPoint.x * this.startPoint.x - this.b * this.startPoint.x;
+        return this;
+
+    },
+    fnMove:function(src){
+        var $img = $("<img>");
+        $img.attr("src","../img/"+src);
+        $("body").append($img);
+        var x = this.startPoint.x;
+        var y = this.startPoint.y;
+        $img.css({
+            width:30,
+            height:30,
+            position:"absolute",
+            left : x,
+            top : y
+        })
+        var timer = setInterval(function(){
+            x=x+10,
+            y=this.a*x*x+this.b*x+this.c
+            if (x<this.endPoint.x) {
+                $img.css({
+                    left:x,
+                    top:y
+                })
+            }else{
+                clearInterval(timer);
+                $img.remove();
+            }
+        }.bind(this),10)
+    }
+})
 
 
 

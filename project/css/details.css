@@ -1,4 +1,4 @@
-ul, body, p, h2 {
+ul, body, p, h2, h3 {
   margin: 0;
   padding: 0;
 }
@@ -217,6 +217,22 @@ input::-webkit-input-placeholder {
   height: 654px;
   padding: 8px 0 14px 0;
 }
+#bannerwrap #banner .banner_div .bdiv {
+  position: absolute;
+  left: 20px;
+  width: 385px;
+  height: 520px;
+  z-index: 10;
+}
+#bannerwrap #banner .banner_div .bdiv .fdj {
+  position: absolute;
+  width: 96px;
+  height: 129px;
+  background: #000;
+  opacity: 0.5;
+  z-index: 10;
+  display: none;
+}
 #bannerwrap #banner .banner_div .banner_big {
   position: relative;
   margin-left: 20px;
@@ -227,15 +243,6 @@ input::-webkit-input-placeholder {
   position: absolute;
   top: 0;
   left: 0;
-}
-#bannerwrap #banner .banner_div .banner_big .fdj {
-  position: absolute;
-  width: 96px;
-  height: 129px;
-  background: #000;
-  opacity: 0.5;
-  z-index: 10;
-  display: none;
 }
 #bannerwrap #banner .banner_div .banner_small {
   position: absolute;
@@ -364,7 +371,7 @@ input::-webkit-input-placeholder {
 #bannerwrap #banner .banner_div1 .banner_div1_box .br_d1_b_div .br_div .br_div_span2 {
   color: #666;
 }
-#bannerwrap #banner .banner_div1 .banner_div1_box .br_d1_b_div .br_div .br_div_span2 .br_div_span2 {
+#bannerwrap #banner .banner_div1 .banner_div1_box .br_d1_b_div .br_div .br_div_span2 .br_div_span2_i {
   font-style: normal;
   text-decoration: line-through;
 }
@@ -425,6 +432,7 @@ input::-webkit-input-placeholder {
   top: 10px;
   right: 10px;
   font-size: 12px;
+  color: #000;
 }
 #bannerwrap #banner .banner_div1 .banner_div1_box2 .b_box2_div1 {
   position: relative;
@@ -494,25 +502,24 @@ input::-webkit-input-placeholder {
   line-height: 32px;
   border-right: 1px solid #ccc;
 }
-#bannerwrap #banner .banner_div1 .banner_div1_box2 .b_box2_div2 .bbox2d2_div .add {
+#bannerwrap #banner .banner_div1 .banner_div1_box2 .b_box2_div2 .bbox2d2_div .addp {
   position: absolute;
   right: 0;
   top: 0;
+  border-bottom: 1px solid #ccc;
+}
+#bannerwrap #banner .banner_div1 .banner_div1_box2 .b_box2_div2 .bbox2d2_div .add {
   display: block;
   width: 22px;
   height: 16px;
   text-align: center;
   line-height: 16px;
-  border-bottom: 1px solid #ccc;
+  font-style: normal;
 }
-#bannerwrap #banner .banner_div1 .banner_div1_box2 .b_box2_div2 .bbox2d2_div .remove {
+#bannerwrap #banner .banner_div1 .banner_div1_box2 .b_box2_div2 .bbox2d2_div .removep {
   position: absolute;
   right: 0;
   bottom: 0;
-  width: 22px;
-  height: 16px;
-  text-align: center;
-  line-height: 16px;
 }
 #bannerwrap #banner .banner_div1 .banner_div1_box2 .b_box2_div2 .bbox2d2_span2 {
   position: absolute;
@@ -622,6 +629,7 @@ input::-webkit-input-placeholder {
   height: 24px;
   background: #fff;
   background: url(../img/lbu.png) no-repeat center right;
+  opacity: 0.5;
 }
 #bannerwrap #banner .banner_div2 .banner_btn .banner_btn2 {
   position: absolute;
@@ -630,6 +638,7 @@ input::-webkit-input-placeholder {
   width: 50px;
   height: 24px;
   background: url(../img/lbd.png) no-repeat center left;
+  opacity: 0.5;
 }
 
 #mapwrap {

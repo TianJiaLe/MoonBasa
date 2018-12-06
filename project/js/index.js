@@ -71,7 +71,7 @@ function showtime(){
 		var str = '';
 		for( var i = 0 ; i < msg.length ; i++  ){
 				str += `<li class="banner_list">
-						<a href="#">
+						<a href="html/details.html?mid=${msg[i].src}">
 							<img src="img/${msg[i].src}" alt="">
 						</a>
 						<p class="banner_p">${msg[i].p1}</p>

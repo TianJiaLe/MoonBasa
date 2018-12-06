@@ -1,4 +1,4 @@
-ul,body,p,h2{margin:0;padding: 0;}
+ul,body,p,h2,h3{margin:0;padding: 0;}
 li{list-style: none;}
 a{text-decoration: none;}
 img{vertical-align: middle;}
@@ -208,6 +208,22 @@ input::-webkit-input-placeholder {
             width: 431px;
             height: 654px;
             padding: 8px 0 14px 0;
+            .bdiv{
+                position: absolute;
+                left: 20px;
+                width: 385px;
+                height: 520px;
+                z-index: 10;
+                .fdj{
+                    position: absolute;
+                    width: 96px;
+                    height: 129px;
+                    background: #000;
+                    opacity: 0.5;
+                    z-index: 10;
+                    display: none;
+                }
+            }
             .banner_big{
                 position: relative;
                 margin-left: 20px;
@@ -217,15 +233,6 @@ input::-webkit-input-placeholder {
                     position: absolute;
                     top: 0;
                     left: 0;
-                }
-                .fdj{
-                    position: absolute;
-                    width: 96px;
-                    height: 129px;
-                    background: #000;
-                    opacity: 0.5;
-                    z-index: 10;
-                    display: none;
                 }
             }
             .banner_small{
@@ -351,7 +358,7 @@ input::-webkit-input-placeholder {
                         }
                         .br_div_span2{
                             color: #666;
-                            .br_div_span2{
+                            .br_div_span2_i{
                                 font-style: normal;
                                 text-decoration: line-through;
                             }
@@ -412,6 +419,7 @@ input::-webkit-input-placeholder {
                                 top: 10px;
                                 right: 10px;
                                 font-size: 12px;
+                                color: #000;
                             }
                         }
                     }
@@ -482,25 +490,24 @@ input::-webkit-input-placeholder {
                             line-height: 32px;
                             border-right: 1px solid #ccc;
                         }
-                        .add{
+                        .addp{
                             position: absolute;
                             right: 0;
                             top: 0;
+                            border-bottom: 1px solid #ccc;
+                        }
+                        .add{
                             display: block;
                             width: 22px;
                             height: 16px;
                             text-align: center;
                             line-height: 16px;
-                            border-bottom: 1px solid #ccc;
+                            font-style: normal;
                         }
-                        .remove{
+                        .removep{
                             position: absolute;
                             right: 0;
                             bottom: 0;
-                            width: 22px;
-                            height: 16px;
-                            text-align: center;
-                            line-height: 16px;
                         }
                     }
                     .bbox2d2_span2{
@@ -612,6 +619,7 @@ input::-webkit-input-placeholder {
                     height: 24px;
                     background: #fff;
                     background: url(../img/lbu.png) no-repeat center right;
+                    opacity: 0.5;
                 }
                 .banner_btn2{
                     position: absolute;
@@ -620,6 +628,7 @@ input::-webkit-input-placeholder {
                     width: 50px;
                     height: 24px;
                     background: url(../img/lbd.png) no-repeat center left;
+                    opacity: 0.5;
                 }
             }
         }
